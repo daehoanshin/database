@@ -1,0 +1,28 @@
+## JTS database 생성, JTS database와 db2inst1 유저 연결, JTS db2inst1 접속 종료
+  db2 create database JTS using codeset UTF-8 territory en PAGESIZE 16384
+  db2 connect to JTS user db2inst1 using oracle
+  db2 connect reset
+
+## CCM database 생성, CCM database와 db2inst1 유저 연결, CCM db2inst1 접속 종료
+  db2 create database CCM using codeset UTF-8 territory en PAGESIZE 16384
+  db2 connect to CCM user db2inst1 using oracle
+  db2 connect reset
+
+## QM database 생성, QM database와 db2inst1 유저 연결, QM db2inst1 접속 종료
+  db2 create database QM using codeset UTF-8 territory en PAGESIZE 16384
+  db2 connect to QM user db2inst1 using oracle
+  db2 connect reset
+
+## RM database 생성, RM database와 db2inst1 유저 연결, RM db2inst1 접속 종료
+  db2 create database RM using codeset UTF-8 territory en PAGESIZE 16384
+  db2 connect to RM user db2inst1 using oracle
+  db2 connect reset
+
+## DW database 생성, DW database와 db2inst1 유저 연결, DW db2inst1 접속 종료
+  db2 create database DW using codeset UTF-8 territory en PAGESIZE 16384
+  db2 connect to DW user db2inst1 using oracle
+  db2 connect reset
+
+
+## jts/setup
+ //oradev:50000/JTS:user=db2inst1;password={password};
