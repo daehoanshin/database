@@ -1,0 +1,54 @@
+# 컴럼정의
+  V_VOC_AS_HISTORY (type분류컬럼)
+  R/S(투비전 전체) =  Real, Vision
+  TV(PRO+LITE) = TWOVISION 라이트, TWOVISION 프로
+
+
+# 이슈
+
+  * 듀얼플레이트 파일  import시 크롬브라우저 cannot concatenate 'str' and 'NoneType
+  Why am I receiving "cannot concatenate 'str' and 'NoneType' objects" error when uploading a log file
+  https://answers.splunk.com/answers/474598/why-am-i-receiving-cannot-concatenate-str-and-none.html
+
+  * batch로 실행했을시 timestamp 인식안됨 rising 처리해야 됨
+  * mysql에서 날짜 컬럼이 datetime이 아닐경우 convert 데이터 포맷 변환
+  * eval()에서 divide 안먹힘
+
+
+# 지표 작성 상세내용
+
+  ## AS 불량률
+    * - TV(PRO+LITE) 불량률 선형지표(주단위-3개월)
+    * - VISION 불량률 선형지표(주단위-3개월)
+    * - Real 선형지표(주단위 - 3개월)
+    * - TV PRO GS 본체 불량률 선형그래프(일단위-2주)
+
+    V_VOC_AS_HISTORY
+    모델명, 수리내역대, 접수일시, Type분류
+    V_VOC_COUNSEL_HISTORY
+    상담접수일시, 소분류
+    V_R_KEY_MATRIX_ALL(비전 리얼)
+    날짜, R/S(Vision), R/S(N+R), 전체시스템수(N+R), 전체시스템수(Vision)
+    V_FC_KEY_MATRIX_ALL(투비전)
+    R/S(TV PRO), R/S(TV LITE)
+
+
+  ## VOC 지표
+    V_VOC_COUNSEL_HISTORY
+    * - 소분류별 TOP5 인입건 그래프(일단위-최근2주)
+
+  ## R/S 지표
+    * - TWOVISION R/S 선형 그래프(일단위)
+    * - VISION R/S 선형 그래프(일단위)
+    * - REAL R/S 선형 그래프(일단위)
+
+  ## 듀얼플레이트
+    듀얼플레이트 알람로그
+    Alarm 170(HEXaa):2018 yr 로그파일 정규식 파싱
+
+    - 알림별 카운트 지표
+    - 매장별 알림발생 지표
+
+# API 연동 방식()
+  POC시 연동불가, 이미 완료된 open API 연동된 프로젝트로 대체 예정
+  

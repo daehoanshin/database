@@ -1,0 +1,17 @@
+-- ## 추가
+CREATE TABLESPACE TS_CCM_D01
+DATAFILE 'C:\app\Administrator\oradata\orcl\TS_CCM_D01.DBF'
+SIZE 1G AUTOEXTEND ON EXTENT MANAGEMENT LOCAL AUTOALLOCATE;
+
+CREATE TEMPORARY TABLESPACE TS_CCM_T01
+TEMPFILE 'C:\app\Administrator\oradata\orcl\TS_CCM_T01.DBF'
+SIZE 20M AUTOEXTEND ON EXTENT MANAGEMENT LOCAL UNIFORM SIZE 1M;
+
+-- ## 삭제
+drop tablespace TS_CCM_D01
+including contents and datafiles
+cascade constraints;
+
+drop tablespace TS_CCM_T01
+including contents and datafiles
+cascade constraints;

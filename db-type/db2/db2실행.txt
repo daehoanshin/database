@@ -1,0 +1,26 @@
+db2inst1 계정접속
+pw : oracle
+
+/home/db2inst1/sqllib/adm
+./db2start
+
+[db2inst1@oradev adm]$ ps -ef |grep db2
+root       4513   4046  0 11:34 pts/0    00:00:00 su - db2inst1
+db2inst1   4517   4513  0 11:34 pts/0    00:00:00 -bash
+root       4680      1  0 11:36 ?        00:00:00 /opt/ibm/db2/V10.1/bin/db2fmcd
+root       4692      1  4 11:37 pts/0    00:00:00 db2wdog 0 [db2inst1]
+db2inst1   4694   4692  5 11:37 pts/0    00:00:00 db2sysc 0
+root       4695   4694  0 11:37 pts/0    00:00:00 db2ckpwd 0
+root       4696   4694  0 11:37 pts/0    00:00:00 db2ckpwd 0
+root       4697   4694  0 11:37 pts/0    00:00:00 db2ckpwd 0
+db2inst1   4704   4692  0 11:37 pts/0    00:00:00 db2vend (PD Vendor Process - 1) 0
+db2inst1   4712   4692  1 11:37 pts/0    00:00:00 db2acd 0 ,0,0,0,1,0,0,0000,1,0,98bd90,14,1e014,2,0,1,11fc0,0x210000000,0x210000000,1600000,c0014,2,c8015
+db2inst1   4716   4517  0 11:37 pts/0    00:00:00 ps -ef
+db2inst1   4717   4517  0 11:37 pts/0    00:00:00 grep db2
+[db2inst1@oradev adm]$ netstat -an |grep 50000
+tcp        0      0 0.0.0.0:50000               0.0.0.0:*                   LISTEN
+[db2inst1@oradev adm]$ netstat -anp |grep 50000
+(Not all processes could be identified, non-owned process info
+ will not be shown, you would have to be root to see it all.)
+tcp        0      0 0.0.0.0:50000               0.0.0.0:*                   LISTEN      4694/db2sysc 0
+[db2inst1@oradev adm]$
