@@ -1,0 +1,26 @@
+# 사전 조건
+  target은 tablespace와 유저가 미리 생성되어야 함
+
+
+  ## 익스포트 source
+  [oracle@oradev ~]$ exp userid=s_ccm/Passw0rd file='/home/oracle/ccm.dmp'
+
+  exp userid=S_CCM/Passw0rd file='/home/oracle/ccm.dmp'
+  exp userid=S_DW/Passw0rd file='/home/oracle/dw.dmp'
+  exp userid=S_DCC/Passw0rd file='/home/oracle/dcc.dmp'
+  exp userid=S_JTS/Passw0rd file='/home/oracle/jts.dmp'
+  exp userid=S_LDX/Passw0rd file='/home/oracle/ldx.dmp'
+  exp userid=S_LQE/Passw0rd file='/home/oracle/lqe.dmp'
+  exp userid=S_RICM/Passw0rd file='/home/oracle/ricm.dmp'
+
+
+  ## 임포트 target
+  c:\>imp s_ccm/Passw0rd@orcl file=ccm.dmp full=y
+
+  imp S_CCM/Passw0rd@orcl file=ccm.dmp full=y
+  imp S_DW/Passw0rd@orcl file=dw.dmp full=y
+  imp S_DCC/Passw0rd@orcl file=dcc.dmp full=y
+  imp S_JTS/Passw0rd@orcl file=jts.dmp full=y
+  imp S_LDX/Passw0rd@orcl file=ldx.dmp full=y
+  imp S_LQE/Passw0rd@orcl file=lqe.dmp full=y
+  imp S_RICM/Passw0rd@orcl file=ricm.dmp full=y
