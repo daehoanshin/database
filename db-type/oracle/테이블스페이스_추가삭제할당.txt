@@ -1,3 +1,5 @@
+-- # 커스터마이징 경로
+
 -- ## CCM 추가
 CREATE TABLESPACE TS_CCM_D01
 DATAFILE 'C:\app\Administrator\oradata\orcl\TS_CCM_D01.DBF'
