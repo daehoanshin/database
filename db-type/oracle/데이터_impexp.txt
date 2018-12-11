@@ -24,3 +24,12 @@
   imp S_LDX/Passw0rd@orcl file=ldx.dmp full=y
   imp S_LQE/Passw0rd@orcl file=lqe.dmp full=y
   imp S_RICM/Passw0rd@orcl file=ricm.dmp full=y
+
+
+  imp S_CCM/Passw0rd@TSMRDB file=ccm.dmp full=y
+  imp S_DW/Passw0rd@TSMRDB file=dw.dmp full=y
+  imp S_DCC/Passw0rd@TSMRDB file=dcc.dmp full=y
+  imp S_JTS/Passw0rd@TSMRDB file=jts.dmp full=y
+  imp S_LDX/Passw0rd@TSMRDB file=ldx.dmp full=y
+  imp S_LQE/Passw0rd@TSMRDB file=lqe.dmp full=y
+  imp S_RICM/Passw0rd@TSMRDB file=ricm.dmp full=y
