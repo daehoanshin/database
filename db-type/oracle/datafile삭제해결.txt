@@ -1,0 +1,9 @@
+oracle datafile이 삭제되었을때
+
+
+alter database datafile '/oracle/oradata/TSMRDB/VNF_IDX_1.ora' offline drop;
+alter database datafile '/oracle/oradata/TSMRDB/VNF_32K_1.ora' offline drop;
+alter database datafile '/oracle/oradata/TSMRDB/VSTR_IDX_1.ora' offline drop;
+alter database datafile '/oracle/oradata/TSMRDB/VSTR_32K_1.ora' offline drop;
+
+alter tablespace VNF_IDX_1 offline immediate;
