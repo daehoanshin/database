@@ -6,7 +6,7 @@ GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';
 FLUSH PRIVILEGES;
 
 INSERT INTO mysql.user (host,user,authentication_string,ssl_cipher, x509_issuer, x509_subject) VALUES ('%','xbb123',password('oracle'),'','','');
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';
+GRANT ALL PRIVILEGES ON *.* TO 'xbb123'@'%';
 FLUSH PRIVILEGES;
 
 ```
@@ -27,3 +27,6 @@ FLUSH PRIVILEGES;
 ```
   bind-address=0.0.0.1
 ```
+
+
+show variables WHERE variable_name like '%dir';
